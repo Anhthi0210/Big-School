@@ -28,6 +28,10 @@ textarea {
     background-color: #777;
     border-color: #fff
 }
+.navbar-inverse{
+    background-color: #d41d50
+    
+}
 .course {
     list-style: none;
 }

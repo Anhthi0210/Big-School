@@ -24,20 +24,20 @@
                         Lecturerid = c.String(nullable: false, maxLength: 128),
                         Place = c.String(nullable: false, maxLength: 255),
                         DateTime = c.DateTime(nullable: false),
-                        CategoriID = c.Byte(nullable: false),
-                        Category_Id = c.Byte(),
+                        CategoryId = c.Byte(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Categories", t => t.Category_Id)
+                .ForeignKey("dbo.Categories", t => t.CategoryId, cascadeDelete: true)
                 .ForeignKey("dbo.AspNetUsers", t => t.Lecturerid, cascadeDelete: true)
                 .Index(t => t.Lecturerid)
-                .Index(t => t.Category_Id);
+                .Index(t => t.CategoryId);
             
             CreateTable(
                 "dbo.AspNetUsers",
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
+                        Name = c.String(nullable: false, maxLength: 255),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
                         PasswordHash = c.String(),
@@ -110,14 +110,14 @@
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.Courses", "Category_Id", "dbo.Categories");
+            DropForeignKey("dbo.Courses", "CategoryId", "dbo.Categories");
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
-            DropIndex("dbo.Courses", new[] { "Category_Id" });
+            DropIndex("dbo.Courses", new[] { "CategoryId" });
             DropIndex("dbo.Courses", new[] { "Lecturerid" });
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.AspNetUserRoles");

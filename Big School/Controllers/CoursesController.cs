@@ -35,7 +35,7 @@ namespace Big_School.Controllers
             {
                 Lecturerid = User.Identity.GetUserId(),
                 DateTime = viewModel.GetDateTime(),
-                CategoriID = viewModel.Category,
+                CategoryId = viewModel.Category,
                 Place = viewModel.Place
             };
             _dbContext.Course.Add(course);

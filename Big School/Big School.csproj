@@ -175,21 +175,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303131217002_InitialModel.cs" />
-    <Compile Include="Migrations\202303131217002_InitialModel.designer.cs">
-      <DependentUpon>202303131217002_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202303131340308_InitialModel.cs" />
+    <Compile Include="Migrations\202303131340308_InitialModel.designer.cs">
+      <DependentUpon>202303131340308_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303131221581_CreateTableCourse.cs" />
-    <Compile Include="Migrations\202303131221581_CreateTableCourse.designer.cs">
-      <DependentUpon>202303131221581_CreateTableCourse.cs</DependentUpon>
+    <Compile Include="Migrations\202303131343530_PopulateCategoryTable.cs" />
+    <Compile Include="Migrations\202303131343530_PopulateCategoryTable.designer.cs">
+      <DependentUpon>202303131343530_PopulateCategoryTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303131222476_PopulateCategoryTable.cs" />
-    <Compile Include="Migrations\202303131222476_PopulateCategoryTable.designer.cs">
-      <DependentUpon>202303131222476_PopulateCategoryTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202303131241506_AddNameColumnToApplicationUser.cs" />
-    <Compile Include="Migrations\202303131241506_AddNameColumnToApplicationUser.designer.cs">
-      <DependentUpon>202303131241506_AddNameColumnToApplicationUser.cs</DependentUpon>
+    <Compile Include="Migrations\202303131346247_AddNameColumnToApplicationUser.cs" />
+    <Compile Include="Migrations\202303131346247_AddNameColumnToApplicationUser.designer.cs">
+      <DependentUpon>202303131346247_AddNameColumnToApplicationUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -279,17 +275,14 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202303131217002_InitialModel.resx">
-      <DependentUpon>202303131217002_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303131340308_InitialModel.resx">
+      <DependentUpon>202303131340308_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303131221581_CreateTableCourse.resx">
-      <DependentUpon>202303131221581_CreateTableCourse.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303131343530_PopulateCategoryTable.resx">
+      <DependentUpon>202303131343530_PopulateCategoryTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303131222476_PopulateCategoryTable.resx">
-      <DependentUpon>202303131222476_PopulateCategoryTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303131241506_AddNameColumnToApplicationUser.resx">
-      <DependentUpon>202303131241506_AddNameColumnToApplicationUser.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303131346247_AddNameColumnToApplicationUser.resx">
+      <DependentUpon>202303131346247_AddNameColumnToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

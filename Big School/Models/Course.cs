@@ -16,10 +16,10 @@ namespace Big_School.Models
         public String Lecturerid { get; set; }
         [Required]
         [StringLength(255)]
-        public String Place { get; set; }
+        public string Place { get; set; }
         public DateTime DateTime { get; set; }
         public Category Category { get; set; }
         [Required]
-        public byte CategoriID { get; set; }
+        public byte CategoryId { get; set; }
     }
 }
