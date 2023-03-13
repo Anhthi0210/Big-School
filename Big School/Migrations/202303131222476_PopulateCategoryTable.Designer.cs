@@ -7,13 +7,13 @@ namespace Big_School.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class InitialModel : IMigrationMetadata
+    public sealed partial class PopulateCategoryTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(PopulateCategoryTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202303060630340_InitialModel"; }
+            get { return "202303131222476_PopulateCategoryTable"; }
         }
         
         string IMigrationMetadata.Source

@@ -17,7 +17,7 @@ namespace Big_School.Controllers
             _dbContext = new ApplicationDbContext();
         }
         // GET: Courses
-        //[Authorize]
+        [Authorize]
         public ActionResult Create()
         {
             var viewModel = new CourseViewModel
@@ -26,20 +26,21 @@ namespace Big_School.Controllers
             };
             return View(viewModel);
         }
-        //[Authorize]
-        //[HttpPost]
-        //public ActionResult Create(CourseViewModel viewModel)
-        //{
-        //    var course = new Course();
-        //    {
-        //        LecturerId = User.Identity.GetUserId(),
-        //        DateTime = viewModel.GetDateTime(),
-        //        CategoryId = viewModel.Category,
-        //        Place = viewModel.Place
-        //    };
-        //    _dbContext.Course.Add(course);
-        //    _dbContext.SaveChanges();
-        //    return RedirectToAction("Index", "Home");
-        //}
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(CourseViewModel viewModel)
+        {
+            var course = new Course
+            {
+                Lecturerid = User.Identity.GetUserId(),
+                DateTime = viewModel.GetDateTime(),
+                CategoriID = viewModel.Category,
+                Place = viewModel.Place
+            };
+            _dbContext.Course.Add(course);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
